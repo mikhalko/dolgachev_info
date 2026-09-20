@@ -1,0 +1,118 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #333;
+  background: #fff;
+}
+
+a { color: #6b2e0e; }
+
+.site-header,
+.site-nav,
+main {
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.site-header,
+.site-nav { max-width: 1080px; }
+
+/* Header */
+.site-header {
+  text-align: center;
+  padding-top: 56px;
+  padding-bottom: 48px;
+}
+.site-title {
+  margin: 0;
+  font-size: clamp(2rem, 6vw, 3.4rem);
+  font-weight: 300;
+  line-height: 1.2;
+}
+.site-title a { color: #1a1a1a; text-decoration: none; }
+.site-tagline { margin: 8px 0 0; color: #1a1a1a; }
+
+/* Navigation */
+.site-nav ul { list-style: none; margin: 0; padding: 0; }
+.site-nav > ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+.site-nav li { position: relative; }
+.site-nav a,
+.site-nav span {
+  display: block;
+  padding: 12px 20px;
+  color: #1a1a1a;
+  font-size: 0.95rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.site-nav a:hover,
+.site-nav a[aria-current="page"] { color: #6b2e0e; }
+
+.site-nav li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  min-width: 260px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+}
+.site-nav li:hover ul,
+.site-nav li:focus-within ul { display: block; }
+
+/* Content */
+main {
+  max-width: 760px;
+  padding-top: 56px;
+  padding-bottom: 72px;
+}
+main h1 {
+  margin: 0 0 24px;
+  font-size: 2rem;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.text p { text-align: justify; }
+
+.home { max-width: 1080px; text-align: center; }
+.home img { max-width: 100%; width: 520px; height: auto; }
+
+.video { margin: 0 0 40px; }
+.video h2 { margin: 0 0 12px; font-size: 1rem; font-weight: 400; }
+.video iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  background: #000;
+}
+
+.site-footer {
+  padding: 20px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #666;
+  background: #f4f4f4;
+}
+
+@media (max-width: 600px) {
+  body { font-size: 16px; }
+  .site-header { padding-top: 32px; padding-bottom: 28px; }
+  main { padding-top: 32px; }
+  .text p { text-align: left; }
+  /* no hover on phones: show the submenu inline */
+  .site-nav > ul { flex-direction: column; text-align: center; }
+  .site-nav li ul { display: block; position: static; border: 0; }
+}
