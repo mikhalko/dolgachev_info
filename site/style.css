@@ -45,32 +45,16 @@ main {
   border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
 }
-.site-nav li { position: relative; }
-.site-nav a,
-.site-nav span {
+.site-nav a {
   display: block;
   padding: 12px 20px;
   color: #1a1a1a;
   font-size: 0.95rem;
   text-decoration: none;
   text-transform: uppercase;
-  cursor: pointer;
 }
 .site-nav a:hover,
 .site-nav a[aria-current="page"] { color: #6b2e0e; }
-
-.site-nav li ul {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 1;
-  min-width: 260px;
-  background: #fff;
-  border: 1px solid #e5e5e5;
-}
-.site-nav li:hover ul,
-.site-nav li:focus-within ul { display: block; }
 
 /* Content */
 main {
@@ -112,7 +96,5 @@ main h1 {
   .site-header { padding-top: 32px; padding-bottom: 28px; }
   main { padding-top: 32px; }
   .text p { text-align: left; }
-  /* no hover on phones: show the submenu inline */
   .site-nav > ul { flex-direction: column; text-align: center; }
-  .site-nav li ul { display: block; position: static; border: 0; }
 }
